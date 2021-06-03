@@ -17,7 +17,7 @@ class Rate(models.Model):
 class Hotel(models.Model):
     name = models.CharField(max_length=200)
     address = models.CharField(max_length=200)
-    description = models.CharField(max_length=500)
+    description = models.TextField()
 
 
 class Room(models.Model):
@@ -50,7 +50,7 @@ class Booking(models.Model):
     start_day = models.DateField() # start of stay
     end_day = models.DurationField() # end of stay
     room_id = models.ManyToManyField(Room, related_name = 'rooms', blank=True)
-    guest_id = models.ForeignKey(Guest, on_delete = models.CASCADE)
+    guest_id = models.ForeignKey(Guest, on_delete = models.PROTECT)
     status = models.CharField(max_length=10, default = 'pending')
     creation_date = models.DateTimeField(auto_now_add=True)
     confirmation_date = models.DateTimeField(null=True, blank=True)
@@ -58,3 +58,10 @@ class Booking(models.Model):
     cancelation_date = models.DateTimeField(null=True, blank=True)
     # canceled_by = models.ForeignKey(Staff_user, on_delete=models.PROTECT)
     discount = models.FloatField(default = 0.)
+
+
+class CustomerMessage(models.Model):
+    message = models.TextField()
+    creation_date = models.DateTimeField(auto_now_add=True)
+    guest_id = models.ForeignKey(Guest, on_delete = models.PROTECT)
+    is_treated = models.BooleanField()
