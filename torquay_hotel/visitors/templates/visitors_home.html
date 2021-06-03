@@ -27,6 +27,11 @@
     <div class="colonne">
         <p>Check availability</p>
     </div>
+    <div class="colonne">
+        <a href="{% url 'addmessage' user.guest.id %}" class="btn btn-primary">
+            Send a message or request to the hotel
+        </a>
+    </div>
 </div>
 
 {% endblock  %}

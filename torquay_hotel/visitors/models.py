@@ -7,6 +7,9 @@ class Country(models.Model):
     name = models.CharField(max_length=50)
     code = models.CharField(max_length=5)
 
+    def __str__(self):
+        return self.name + ' (' + self.code + ')'
+
 
 class Rate(models.Model):
     nb_people = models.IntegerField()
@@ -64,4 +67,4 @@ class CustomerMessage(models.Model):
     message = models.TextField()
     creation_date = models.DateTimeField(auto_now_add=True)
     guest_id = models.ForeignKey(Guest, on_delete = models.PROTECT)
-    is_treated = models.BooleanField()
+    is_treated = models.BooleanField(default = 0)

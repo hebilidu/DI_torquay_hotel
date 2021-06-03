@@ -1,0 +1,23 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+<!-- load django_bootstrap5 -->
+{% load bootstrap %}
+
+{% block css %}
+{% endblock %}
+
+{% block title %} List guests {% endblock %} 
+
+{% block content %}
+
+<div class="cont-left">
+    <h1>List of all the Guests</h1>
+
+    <ul>
+        {% for g in guests %}
+        <li>{{g.last_name}} {{g.first_name}}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}
