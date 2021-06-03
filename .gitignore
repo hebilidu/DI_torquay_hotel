@@ -61,6 +61,7 @@ settings.py
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+__pycache__
 
 # Flask stuff:
 instance/
@@ -137,3 +138,10 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+torquay_hotel/torquay_hotel/__pycache__/settings.cpython-39.pyc
+torquay_hotel/torquay_hotel/__pycache__/settings.cpython-39.pyc
+torquay_hotel/torquay_hotel/__pycache__/urls.cpython-39.pyc
+torquay_hotel/torquay_hotel/__pycache__/urls.cpython-39.pyc
+torquay_hotel/torquay_hotel/__pycache__/urls.cpython-39.pyc
+torquay_hotel/torquay_hotel/__pycache__/urls.cpython-39.pyc
+torquay_hotel/torquay_hotel/__pycache__/settings.cpython-39.pyc
