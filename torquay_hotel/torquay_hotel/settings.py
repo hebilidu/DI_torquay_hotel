@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'bootstrapform',
     'star_ratings',
     'visitors',
-    'staff'
+    'staff',
+    'events'
 ]
 
 MIDDLEWARE = [
